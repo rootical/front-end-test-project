@@ -10,15 +10,18 @@ Convert the following parts of X-Plosion web site to HTML/CSS/JS. **Do not code 
 ![X-Plosion](xplosion.jpg)
 
 ## Requirements
-1. Create project using **XH Generator** - https://github.com/xhtmlized/generator-xh
-2. Use HTML5 / SCSS
-3. Create page called Home and place the elements on it
-4. Use CSS3 PIE to add CSS3 support to IE8
-5. Add Colorbox (http://www.jacklmoore.com/colorbox/) as a Bower dependency and open sample photos in the news section as an image group / gallery like follows:
+1. Generate initial application with yeoman generator, for instance generator-modern-frontend.
+2. Use HTML5 / SASS
+3. Use bower as third parties lib manager
+4. Create page called Home and place the elements on it
+5. Use CSS3 PIE to add CSS3 support to IE8
+6. Add Colorbox (http://www.jacklmoore.com/colorbox/) as a Bower dependency and open sample photos in the news section as an image group / gallery like follows:
   * When the page loads open the first photo in colorbox automatically (without user clicking on the image).
   * Go through all 4 images in 2 seconds interval but without using a built in slideshow functionality (Hint: Check *Event Hooks* example on the Colorbox homepage.)
   * Close Colorbox when the last image from the gallery is reached.
-    
+7. Do not use bootstrap/foundation
+8. Your markup should look fine on mobile devices
+
 ## Download PSD
 [xplosion.zip](xplosion.zip?raw=true) (2MB)
 
