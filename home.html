@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			X-PLOSION home page
+		</title>
+		
+		<meta charset="utf-8">
+		<meta name="description" content="redesign">
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" >
+		<link type="text/css" rel="stylesheet" href="./css/normalizer.css">
+		<link type="text/css" rel="stylesheet" href="./css/jquery.mmenu.all.css">
+		<link type="text/css" rel="stylesheet" href="./css/home.css">
+		<!--[if lte IE 8]>
+			<link type="text/css" rel="stylesheet" href="./css/home-ie8.css">
+		<![endif]-->
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<script src="./js/jquery-1.11.3.min.js"></script>
+		<script src="./js/jquery.mmenu.min.all.js"></script>
+		<script src="./js/home.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#main-menu").mmenu({
+					// options
+					navbar: {title: "X-PLOSION"},
+					setSelected: true
+				}, {
+					// configuration
+					classNames: {
+						selected: "selected"
+					}
+				}).mmenu();
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="wrapper">
+			<header id="main-header" role="banner" class="clearfix">
+
+				<a href="#main-menu" class="mobile-menu">
+					<div class="sprite-menu"></div>
+				</a>
+
+				<div id="logo">
+					<a href="#">
+						<h1>X-PLOSION</h1>
+						<p>SODA THAT POPS, FLAVORS THAT EXPLORE</p>
+					</a>
+				</div>
+
+				<div id="logo-banner">
+					<a href="#">
+						<h2>X-PLOSION</h2>
+						<h2>SODA FOR SUPER HEROES</h2>
+					</a>
+				</div>
+
+				<form id="search" action="" role="search">
+					<input type="search" placeholder="Search X-Plosion...">
+					<button type="submit">SEARCH</button>
+				</form>
+			</header>
+			
+			<nav id="main-menu" role="navigation">
+				<ul>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">BLOG</a></li>
+					<li><a href="#">OUR PRODUCTS</a></li>
+					<li><a href="#">ABOUT US</a></li>
+					<li><a href="#">WHERE TO BUY</a></li>
+					<li><a href="#">CONTACT US</a></li>
+				</ul>
+			</nav>
+
+			<section role="main">
+				<div id="intro" class="clearfix">
+					<div class="sprite-bottle-smallest"></div>
+					<h1>X-PLOSION</h1>
+					<h2>SODA FOR SUPERHEROES!</h2>
+					<p>Try a helthy alternative to the currnt artificial drinks - your mind, body and tongue will thank you!</p>
+					<p>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.
+					</p>
+				</div>
+
+				<div id="gallery">
+				
+				</div>
+
+				<div id="news">
+					<section>
+						<h4>X-PLOSION PRODUKTS</h4>
+					
+						<article class="clearfix">
+							<h5>We say NO to artificial flavors</h5>
+							<img src="./images/sprite-news1.png" alt="news 1"></img>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+
+							</p>
+							<a href="#"><div class="sprite-more"></div><span> more</span></a>
+
+						</article>
+						<article class="last clearfix">
+							<h5>New flavor added</h5>
+							<img src="./images/sprite-news3.png" alt="news 3"></img>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+							</p>
+							<a href="#"><div class="sprite-more"></div><span> more</span></a>
+
+						</article>
+					</section>
+
+					<section>
+						<h4>X-PLOSION EXPANSION</h4>
+					
+						<article class="clearfix">
+							<h5>X-Plosion is a hit in Japan</h5>
+							<img src="./images/sprite-news2.png" alt="news 2"></img>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+							</p>
+							<a href="#"><div class="sprite-more"></div><span> more</span></a>
+
+						</article>
+						<article class="last clearfix">
+							<h5>Danish elder hooked on X-Plosion</h5>
+							<img src="./images/sprite-news4.png" alt="news 4"></img>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+							</p>
+							<a href="#"><div class="sprite-more"></div><span> more</span></a>
+
+						</article>
+					</section>
+				</div>
+			</section>
+
+			<aside class="sidebar" role="navigation">
+		        <section>
+					<header>FOLLOW US</header>
+					<div class="sidebar-content">
+						<a href="#facebook"><div class="sprite-facebook"></div><span>Facebook</span></a>
+						<a href="#twitter"><div class="sprite-twitter"></div><span>Twitter</span></a>
+						<a href="#google"><div class="sprite-google"></div><span>Google</span></a>
+					</div>
+		        </section>
+		      
+		        <section>
+					<header>RANDOMLY SELECTED</header>
+					<div class="sidebar-content">
+						<ul>
+							<li>X-Plosion is a hit in Japan</li>
+							<li>3 new favorite added</li>
+							<li>Check our new promo at Youtube</li>
+							<li>We say NO to artificial flavours</li>
+							<li>X-Plosion and your helth</li>
+						</ul>
+					</div>
+		        </section>
+		      
+		        <section>
+					<header>WHERE CAN YOU FIND US</header>
+					<div class="sidebar-content">
+						<p>
+							<span class="bold">X-Plosion Ltd</span><br>
+							9 Danbury Road<br>
+							Wilton<br>
+							CT 06897
+						</p>
+					</div>
+		        </section>
+			</aside>
+
+			<footer id="main-footer">
+				<p>(c) Copyright 2011 X-Plosion Ltd. (<time>2015-11-02</time>)</p>
+				<nav role="navigation">
+					<a href="#"><span>FAQ</span></a>
+					<a href="#"><span>Terms</span></a>
+					<a href="#"><span>Privacy policy</span></a>
+					<a href="#"><span>Contact Us</span></a>
+				</nav>
+			</footer>
+		</div>
+	</body>
+	
+</html>
