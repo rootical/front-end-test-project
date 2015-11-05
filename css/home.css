@@ -21,7 +21,6 @@
 body {
 	margin: 5px;
 	background-color: #EAE2D7;
-	/*min-width: 320px;*/
 }
 
 p {
@@ -185,7 +184,6 @@ p {
 
 
 /* slider */
-
 .slider-wrapper {
 	background-color: #FFF;
 	border-radius: 8px;
@@ -194,14 +192,15 @@ p {
 
 
 /* news */
-#news section{
+#news {
 	margin: 1em 0;
+	border-radius: 8px;
+	overflow: hidden;
 }
 
 #news section h4{
 	background-color: #E61052;
 	color: #FFF;
-	border-radius: 8px 8px 0 0;
 	behavior: url(./plugins/PIE/PIE.htc);
 	padding: 1em;
 	margin: 0;
@@ -221,7 +220,6 @@ p {
 }
 
 #news section article.last { /*.last added because of :last-child is not supported in IE8*/
-	border-radius: 0 0 8px 8px;
 	behavior: url(./plugins/PIE/PIE.htc);
 }
 
@@ -413,21 +411,7 @@ p {
 
 	#news > section {
 		float: left;
-		margin: 0 0 2em 0;
 		width: 270px;
-	}
-
-	#news .left-top {
-		border-radius: 8px 0 0 0 !important;
-	}
-	#news .right-top {
-		border-radius: 0 8px 0 0 !important;
-	}
-	#news .right-bottom {
-		border-radius: 0 0 8px 0 !important;
-	}
-	#news .left-bottom {
-		border-radius: 0 0 0 8px !important;
 	}
 
 	.sidebar {
