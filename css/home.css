@@ -113,7 +113,7 @@ p {
 	border-radius: 8px;
 	border-width: 0;
 	padding: 8px;
-	behavior: url(./PIE/PIE.htc);
+	behavior: url(./plugins/PIE/PIE.htc);
 }
 
 #search button[type="submit"] {
@@ -124,11 +124,11 @@ p {
 
 /* main-menu */
 .sprite-menu {
-	position: fixed;
+	float: left;
 }
 
 #main-menu {
-	position: fixed;
+	position: absolute;
 	width: 60%;
 	background-color: #C9BBA9;
 	top: 2.5em;
@@ -150,7 +150,7 @@ p {
 	padding: 0.6em;
 	margin: 0.3em;
 	text-align: center;
-	behavior: url(./PIE/PIE.htc);
+	behavior: url(./plugins/PIE/PIE.htc);
 	font-size: 14px;
 }
 
@@ -169,18 +169,27 @@ p {
 }
 
 #intro h1 {
-	font-size: 1.5em;
+	font-size: 1.2em;
 	margin-bottom: 0;
 }
 
 #intro .page-title p {
-	font-size: 0.8em;
+	font-size: 0.7em;
 	margin-top: 0;
 	color: #2A1F0F;
 }
 
 #intro > p:first-of-type {
 	font-weight: bold;
+}
+
+
+/* slider */
+
+.slider-wrapper {
+	background-color: #FFF;
+	border-radius: 8px;
+	behavior: url(./plugins/PIE/PIE.htc);
 }
 
 
@@ -193,7 +202,7 @@ p {
 	background-color: #E61052;
 	color: #FFF;
 	border-radius: 8px 8px 0 0;
-	behavior: url(./PIE/PIE.htc);
+	behavior: url(./plugins/PIE/PIE.htc);
 	padding: 1em;
 	margin: 0;
 }
@@ -213,7 +222,7 @@ p {
 
 #news section article.last { /*.last added because of :last-child is not supported in IE8*/
 	border-radius: 0 0 8px 8px;
-	behavior: url(./PIE/PIE.htc);
+	behavior: url(./plugins/PIE/PIE.htc);
 }
 
 #news section div > header{
@@ -248,7 +257,7 @@ p {
 	background-color: #FFF;
 	margin: 1em 0;
 	border-radius: 8px;
-	behavior: url(./PIE/PIE.htc);
+	behavior: url(./plugins/PIE/PIE.htc);
 }
 
 .sidebar section h2 {
@@ -321,7 +330,7 @@ p {
 }
 
 
-@media (min-width: 905px) {
+@media all and (min-width: 992px) {
 	body {
 		margin: 0;
 	}
@@ -339,10 +348,6 @@ p {
 
 	#main-header {
 		text-align: center;
-	}
-
-	#main-header > section {
-		float: left;
 	}
 
 	.sprite-menu {
