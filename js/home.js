@@ -6,7 +6,7 @@ mainApp.fn = (function($){
 
 		toggleMenu: function($menu) {
 			// if (!$menu.is(':animated')) {
-				$menu.stop().fadeToggle( "slow", "linear" );
+			$menu.stop().fadeToggle( "slow", "linear" );
 			// }
 		}
 
