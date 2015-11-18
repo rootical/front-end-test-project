@@ -175,13 +175,14 @@ p {
 
 /* main-menu */
 .sprite-menu {
-  float: left;
+  position: absolute;
 }
 
 #main-menu {
   position: absolute;
   width: 100%;
   background-color: #C9BBA9;
+  left: 0;
   top: 2.5em;
   display: none;
 }
