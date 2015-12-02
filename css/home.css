@@ -1,0 +1,504 @@
+/* sprites (http://css.spritegen.com) */
+.sprite-bottle, 
+.sprite-bottle-small, 
+.sprite-facebook, 
+.sprite-twitter, 
+.sprite-menu, 
+.sprite-google, 
+.sprite-more, 
+.sprite-ul {
+  display: inline-block; 
+  background: url('../images/sprites.png') no-repeat; 
+  overflow: hidden; 
+  text-indent: -9999px; 
+  text-align: left; 
+}
+ 
+.sprite-bottle { 
+  background-position: 0px 0px; 
+  width: 250px; 
+  height: 250px; 
+}
+
+.sprite-bottle-small { 
+  background-position: 0px -250px; 
+  width: 160px; 
+  height: 160px; 
+}
+
+.sprite-facebook { 
+  background-position: -160px -250px; 
+  width: 25px; 
+  height: 25px; 
+}
+
+.sprite-twitter { 
+  background-position: -185px -250px; 
+  width: 25px; 
+  height: 25px; 
+}
+
+.sprite-menu { 
+  background-position: -210px -250px; 
+  width: 24px; 
+  height: 24px; 
+}
+
+.sprite-google { 
+  background-position: -210px -274px; 
+  width: 22px; 
+  height: 22px; 
+}
+
+.sprite-more { 
+  background-position: -234px -250px; 
+  width: 12px; 
+  height: 13px; 
+}
+
+.sprite-ul { 
+  background-position: -234px -263px; 
+  width: 12px; 
+  height: 13px; 
+}
+
+/* common */
+body {
+  background-color: #EAE2D7;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: #8F816C;
+  font-size: 0.8em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* clearfix for modern browsers */
+.clearfix:before,
+.clearfix:after {
+   content: "";
+   display: table;
+}
+.clearfix:after {
+   clear: both;
+}
+ 
+/* clearfix for IE6-7 */
+.clearfix {
+   zoom: 1;
+}
+
+#wrapper {
+  padding: 5px;
+  position: relative;
+}
+
+.sprite-bottle {
+  display: none;
+}
+
+.sprite-bottle-small {
+  float: right;
+}
+
+/* logo */
+#logo {
+  text-align: center;
+}
+
+#logo h1 {
+  color: #E61052; 
+  font-size: 2em;
+  margin: 0;
+}
+
+#logo p {
+  color: #2A1F0F;
+  font-size: 0.5em;
+  margin: 0;
+}
+
+
+/* logo-banner */
+#logo-banner {
+  display: none;
+  
+}
+
+#logo-banner a {
+  transform: rotate(-7deg);
+  color: #FFF;
+  display: block;
+}
+
+#logo-banner h2 {
+  margin: 0 0 0 0.3em;
+  font-size: 1.5em;
+  opacity: 0.4;
+}
+
+#logo-banner p {
+  margin: 0;
+  font-size: 1.2em;
+  opacity: 0.8;
+  color: #FFF;
+}
+
+
+/* search */
+#search {
+  font-size: 0.8em;
+  text-align: center;
+  margin: 0.5em;
+}
+
+#search input ,
+#search button {
+  border-radius: 8px;
+  border-width: 0;
+  padding: 8px;
+  behavior: url(./PIE/PIE.htc);
+}
+
+#search button[type="submit"] {
+  background-color: #E61052;
+  color: #FFF;
+}
+
+
+/* main-menu */
+.sprite-menu {
+  position: absolute;
+}
+
+#main-menu {
+  position: absolute;
+  width: 100%;
+  background-color: #C9BBA9;
+  left: 0;
+  top: 2.5em;
+  display: none;
+}
+
+#main-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* li spaces fixing*/
+  font-size: 0;
+}
+
+#main-menu li {
+  background-color: #E61052;
+  color: #FFF;
+  border-radius: 8px;
+  padding: 0.6em;
+  margin: 0.3em;
+  text-align: center;
+  font-size: 14px;
+  behavior: url(./PIE/PIE.htc);
+}
+
+#main-menu li:hover {
+  background-color: #000;
+}
+
+#main-menu li a {
+  color: #FFF;
+}
+
+
+/* intro */
+#intro h1, #intro h1 + p {
+  color: #E61052;
+}
+
+#intro h1 {
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+#intro .page-title span {
+  display: block;
+  font-size: 0.7em;
+  color: #2A1F0F;
+}
+
+#intro h1 + p {
+  font-weight: bold;
+}
+
+
+/* slider */
+
+.slider-wrapper {
+  background-color: #FFF;
+  border-radius: 8px;
+  behavior: url(./PIE/PIE.htc);
+}
+
+
+/* news */
+#news section {
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1em 0;
+  behavior: url(./PIE/PIE.htc);
+}
+
+#news section h4 {
+  background-color: #E61052;
+  color: #FFF;
+  padding: 1em;
+  margin: 0;
+}
+
+#news section article {
+  background-color: #FFF;
+  color: #8F816C;
+  padding: 0.5em;
+}
+
+#news section article h5{
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #555;
+  margin: 1em 0;
+}
+
+#news img {
+  margin: 0.5em;
+  float: left;
+}
+
+#news .sprite-more {
+  margin: 0 0.1em 0 0;
+}
+
+#news p {
+  margin: 0;
+}
+
+#news span {
+  color: #E61052;
+  font-size: 0.8em;
+    height: 2em;
+    vertical-align: top;
+}
+
+
+/* sidebar */
+.sidebar section {
+  background-color: #FFF;
+  margin: 1em 0;
+  border-radius: 8px;
+  behavior: url(./PIE/PIE.htc);
+}
+
+.sidebar section h2 {
+  color: #E61052;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 1em;
+  border-bottom: 1px dotted #D9CBB6;
+  margin: 0;
+}
+
+.sidebar .sidebar-content {
+  color: #8F816C;
+  padding: 1em;
+  font-size: 0.8em;
+}
+
+.sidebar .sidebar-content a div {
+  height: 2em;
+  vertical-align: middle;
+  margin-left: 0.3em;
+}
+
+.sidebar .sidebar-content a{
+  color: #8F816C;
+}
+
+
+.sidebar .sidebar-content p {
+  margin: 0;
+}
+
+.sidebar .sidebar-content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar .sidebar-content ul li {
+  margin: 1em 0;
+}
+
+.sidebar .sidebar-content ul li:before {
+  display: inline-block; 
+  background: url('../images/sprites.png') no-repeat; 
+  overflow: hidden; 
+  content: "";
+  margin-right: 1em;
+  background-position: -234px -263px; width: 12px; height: 13px;
+}
+
+#main-footer {
+  font-size: 0.8em;
+  background-color: #C9BBA9;
+  color: #8F816C;
+  padding: 1em;
+}
+
+#main-footer a {
+  padding: 0 0.5em;
+  margin: 0;
+  color: #8F816C;
+  border-right: 1px dashed #8F816C;
+}
+
+#main-footer a:first-child {
+  border-left: 1px dashed #8F816C;
+}
+
+
+@media all and (min-width: 992px) {
+  /* Wrapper
+  -----------------------------------------------------------------------------*/
+  #wrapper {
+    width: 850px;
+    margin: 0 auto;
+  }
+
+  /* Header
+  -----------------------------------------------------------------------------*/
+  #main-header {
+    text-align: center;
+  }
+
+  .sprite-menu {
+    display: none;
+  }
+
+  #logo {
+    float: left;
+  }
+
+  #logo-banner {
+    text-align: left;
+    padding-left: 2em;
+    margin: 0 auto; 
+    display: inline-block;
+  }
+
+  #search {
+    float: right;
+  }
+
+  /* Main menu
+  -----------------------------------------------------------------------------*/
+  nav#main-menu {
+    display: block;
+    width: 100%;
+    opacity: 1;
+    background-color: transparent;
+    position: relative;
+    top: 0;
+    margin-top: 2em;
+  }
+
+  #main-menu ul {
+    display: table;
+    width: 100%;
+  }
+
+  #main-menu ul li {
+    border-right: 1px dotted #EAE2D7;
+    display: table-cell;
+    border-radius: 0;
+    padding: 1em;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  #main-menu ul li.first {
+    border-radius: 8px 0 0 8px;
+  }
+
+  #main-menu ul li.last {
+    border-radius: 0 8px 8px 0;
+  }
+
+  /* Middle
+  -----------------------------------------------------------------------------*/
+  .middle {
+    width: 100%;
+    position: relative;
+  }
+
+  .container {
+    width: 100%;
+    float: left;
+  }
+
+  .content {
+    padding: 0 290px 0 0;
+  }
+
+  .sprite-bottle-small {
+    background-position: 0px 0px;
+    width: 250px; 
+    height: 250px;
+  }
+
+  #news {
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1em 0;
+  }
+
+  #news section {
+    float: left;
+    width: 50%;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  /* Sidebar
+  -----------------------------------------------------------------------------*/
+  .sidebar {
+    float: left;
+    width: 270px;
+    margin-left: -270px;
+  }
+
+  /* Footer
+  -----------------------------------------------------------------------------*/
+  #main-footer {
+    padding: 1.5em;
+  }
+
+  #footer-wrapper {
+    width: 850px;
+    padding-top: 1em;
+    margin: auto;
+  }
+
+  #main-footer p {
+    float: left;
+    margin: 0;
+  }
+
+  #main-footer .short-links {
+    float: right;
+  }
+
+}

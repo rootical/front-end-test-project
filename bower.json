@@ -1,0 +1,11 @@
+{
+  "name": "package",
+  "version": "0.0.0",
+  "dependencies": {
+    "bxslider-4": "~4.2.5",
+    "normalize-css": "normalize.css#~3.0.3",
+    "jquery-colorbox": "colorbox#~1.6.3",
+    "respond": "~1.4.2",
+    "jquery": "1.11.3"
+  }
+}
