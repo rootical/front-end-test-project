@@ -1,0 +1,25 @@
+.FB-f-Logo__blue_100:before, .Twitter-Logo-Icon-by-Jon-Bennallick-02:before,.google_plus_logo:before{
+	background: url(../images/sprites.png) no-repeat;
+	display: inline-block;
+	content: '';
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    padding-right: 39px;
+}
+
+.FB-f-Logo__blue_100:before{
+	background-position: 0 0!important;
+
+}
+
+.Twitter-Logo-Icon-by-Jon-Bennallick-02:before{
+	background-position: -79px 0!important;
+
+}
+
+.google_plus_logo:before{
+	background-position: -39px 0!important;
+
+}
+
