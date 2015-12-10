@@ -1,5 +1,8 @@
+/*hamburger script*/
 body{
 	font-family: 'Open Sans', sans-serif;
+	overflow-x:hidden;
+	width:100%;
 	font-size: 16px;
 	background: #EAE2D7; /* For browsers that do not support gradients */
 	background: -webkit-radial-gradient(white, #EAE2D7)); /* Safari 5.1 to 6.0 */
@@ -7,131 +10,181 @@ body{
 	background: -moz-radial-gradient(white, #EAE2D7)); /* For Firefox 3.6 to 15 */
 	background: radial-gradient(white, #EAE2D7); /* Standard syntax */
 }
-
-h1, h2, h3, h4, h5, h6 {
-	margin:0px;
+header{
+	position: fixed;;
+	top:0px;
+	width:100%; 
+	background:#FFFFFF; 
+	height:70px; 
+	line-height:70px;
+}
+.hamburger{
+	margin: 10px;
+	color: black;
+	border:1px solid #CEB9B9;
+	border-radius: 5px;
+	background: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	line-height:45px;
+	padding: 0px 15px 0px 15px;
+/*	color:#fff;
+	border:0;*/
+	font-size: 1.4em;
+	font-weight: bold;
+	cursor: pointer;
+	outline: none;
+	z-index: 1;
+	box-sizing: border-box;
+	width: 50px;
+	height: 50px;
 }
 
-h1{
+
+
+.cross{
+	height:50px;
+	margin: 10px;
+	color: black;
+	border: 1px solid #CEB9B9;
+	border-radius: 5px;
+	background: none;
+	position: absolute;
+	top: 0px;
+	right: 0;
+	padding: 0px 15px 0px 15px;
+/*	color:#fff;
+	border:0;*/
+	font-size: 3em;
+	line-height:70px;
+	font-weight: bold;
+	cursor: pointer;
+	outline: none;
+	z-index: 1;
+	box-sizing: border-box;
+	width: 50px;
+}
+.menu{
+	    top: 70px;
+	padding-left:0px;
+	margin-top:0px;
+	z-index:1000000; 
+	font-weight:bold; 
+	font-size:0.8em; 
+	width:100%; background:#131313;  
+	position:fixed; 
+	text-align:center;
+}
+
+.menu ul {margin: 0; padding: 0!important; list-style-type: none; list-style-image: none;}
+.menu li {display: block;   padding:15px 0 15px 0; }
+.menu li:hover{display: block;    background:#181818; padding:15px 0 15px 0; border-bottom:#1d1f20 1px solid;}
+.menu ul li a { text-decoration:none; text-align: center;  margin: 0px; color:#fff;}
+.menu ul li a:hover {  color: #fff; text-decoration:none;}
+.menu a{text-decoration:none; color:white;}
+.menu a:hover{text-decoration:none; color:white;}
+
+
+.cross{display:none;}
+.menu{display:none;} 
+
+
+
+.glyphicon-home{
+	color:white; 
+	font-size:1.5em; 
+	margin-top:5px; 
+	margin:0 auto;
+}
+/*	allscritpet*/
+
+a {
+	text-decoration: none;
+}
+h1 {
+	margin:0px;
+	font-size: 3em;
 	color: #EB0951;
 }
+
 p, li{
 	color:#97866F;
+	padding: 0px 15px 0px 15px;
 }
 
 .pink {
 	color: #EB0951;
 }
 
-.btn-pink {
-	background-color: #EB0951;
-	padding:5px 10px;
-	border-radius: 10px;
-	font-weight: bold;
-	color:white;
-	font-size: 0.7em;
-	border: 0px;
+/* form script*/
+#searchForm {
+	display: none;
 }
 
-input[type="search"] {
-    border-radius: 10px;
-    border-width: 1px;
-    font-size: 0.7em;
-    padding: 4px;
-    width: 170px;
+/*header script*/
+.img-center{
+	line-height: 10px;
+}
+.img-logo{
+
 }
 
-.imgLeft h1{
-	
-	
-	font-size:3em;
+.img-logo h2{
+	display:none;
 }
 
-.imgLeft h2{
-	margin:0px;
-	font-size: 0.75em;
+.img-logo h1{
+	margin-left: 20px;
 }
 
-.imgLeft{
-	margin-left: 5px;
-	float: left;
-	display: inline-block;
+.img-center {
+	background-color: #e4dace;
+	border: 1px solid #C3BDB5;
+	display: block;
+	height: 70px;
+	margin: 10px auto auto;
+	overflow: hidden;
+	text-align: left;
 }
 
-.searchForm{
-	margin-top: 36px;
-	float:right;
-	display: inline-block;
-}
-
-
-.imgCenter {
-    background-color: #e4dace;
-    border: 1px solid black;
-    display: inline-block;
-    height: 76px;
-    margin: 10px auto auto;
-    overflow: hidden;
-    text-align: left;
-}
-
-.imgCenter h2{
+.img-center h2{
 	color:#FDFAF8;
 }
 
-.imgCenter h1{
+.img-center h1{
 	color:#EFECE3;
 }
 
-
-.imgCenter h1, .imgCenter h2{
-
-	text-transform: 
-	-ms-transform: rotate(-12deg); /* IE 9 */
-    -webkit-transform: rotate(-12deg); /* Chrome, Safari, Opera */
-    transform: rotate(-8deg) translateY(-15px) translateX(-1px);
+.img-center h1, .img-center h2 {
+    line-height: 1em;
+    margin-top: 0;
+    text-transform: rotate(-8deg) translateY(-10px) translateX(0px); 
+	-ms-transform: rotate(-8deg) translateY(-10px) translateX(0px); /* IE 9 */
+	-webkit-transform: rotate(-8deg) translateY(-10px) translateX(0px);/* Chrome, Safari, Opera */
+    transform: rotate(-8deg) translateY(-10px) translateX(0px);
+    white-space: nowrap;
 }
 
-.header {
-    text-align: center;
+/*body element*/
+.column-1{
+	margin-top:80px;
 }
-nav ul {
-	padding: 0;
+.column-1 img{
 	width:100%;
+	margin: auto;
+	display:block;
 }
 
-nav ul li{
-	list-style: none;
-	float: left;
-	background-color: #EB0951;
-	padding:15px 20px;
-	color:white;
-	width:200px;
+.column-2 h1, 
+.column-2 h2 {
 	text-align: center;
-	box-sizing: border-box;
 }
 
-nav ul li a {
-	display: inline-block;
-	color:white;
-	text-decoration: none;
+.column-2 p{
+	text-align: justify;
 }
 
-nav ul li:first-child{
-	border-radius:5px 0px 0px 5px;
-}
-
-nav ul li:last-child{
-	border-radius:0px 5px 5px 0px;
-}
-
-.active {
-	background-color: black;
-}
-
-img{
-	width:100%;
-}
 
 .rightMenu{
 	background-color: #FFFFFF;
@@ -142,18 +195,32 @@ img{
 .rightMenu h3{
 	color:#EB0951;
 	padding: 15px 10px 15px 23px;
-
+	text-align: center;
 	border-bottom: dotted #EAE2D7;
 }
 
 .rightMenu a {
-    color: black;
-    display: flex;
-    float: left;
-    height: 40px;
-    line-height: 40px;
-    text-decoration: none;
-    margin-right:10px;
+	color: black;
+	display: flex;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	text-decoration: none;
+	margin-right:10px;
+}
+
+#follow-us a {
+	color: black;
+   display: flex;
+   /* float: left; */
+   height: 35px;
+   line-height: 35px;
+   text-decoration: none;
+   margin-right: 10px;
+   margin: auto;
+   float:none;
+   width: 200px;
+   margin-bottom:10px;
 }
 
 .rightMenu img{
@@ -178,22 +245,18 @@ img{
 }
 
 .rightMenu  li a::before {
-    color: #0099e6;
-    content: url(../images/arrow.png);
-    display: block;
-    font-size: 1em;
-    left: -25px;
-    max-height: 0;
-    max-width: 0;
-    position: relative;
+	color: #0099e6;
+	content: url(../images/arrow.png);
+	display: block;
+	font-size: 1em;
+	left: -25px;
+	max-height: 0;
+	max-width: 0;
+	position: relative;
 }
 
 .menuRightValue p{
 	margin:5px;
-}
-
-.moveRight{
-	float:right;
 }
 
 .slick-prev::before {
@@ -214,15 +277,14 @@ img{
 	background-color: #CABAAA;
 	border-radius: 10px;
 }
-.sliderImg{
 
+.slick-slide {
+    outline: none
+}
+.sliderImg {
+    width: 250px;
 }
 
-.columnFirsth h1 {
-	font-size: 4em;
-	margin-top: 50px;
-}
-
-.columnFirsth h2 {
-	margin-bottom: 40px;
+.slick-prev {
+	z-index:1;
 }

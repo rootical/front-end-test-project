@@ -1,103 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="css/pseudoBootstrap.css">
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	 	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<title>X-PLOSION</title>
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/sprites.css">
+		<link rel="stylesheet" href="css/responsive-phones.css">
+		<link rel="stylesheet" href="css/responsive-tablets.css">
+		<link rel="stylesheet" href="css/responsive-laptop.css">
+		
+		<title>
+			X-PLOSION
+		</title>
 	</head>
-	<body>
-		<div class="container">
-			<div class="header">
-				<div class="imgLeft">
-					<h1>X-PLOSION</h1>
-					<h2>SODA THAT POPS, FLAVORS THAT EXPLODE</h2>
-				</div>
-				<div class="imgCenter">
-					<h1>X-PLOSION</h1>
-					<h2>SODA FOR SUPERHEROES</h2>
-				</div>
-				<div class="searchForm">
-					<form >
-						<input type="search" placeholder="Search X-PLOSION...">
-						<button class="btn-pink" >SEARCH</button>
-					</form>
-				</div>
+	<body role="document">
+		<header id="main-header" role="banner">
+			<a href="#" class="img-logo">
+				<h1>X-PLOSION</h1>
+				<h2>SODA THAT POPS FLAVOURS TO EXPLODE</h2>
+			</a>
+			<div class="img-center">
+				<h1>X-PLOSION</h1>
+				<h2>SODA FOR SUPERHEROES</h2>
 			</div>
-			<nav>
-				<ul>
-					<li class="active"><a href="#">HOME</a></li>
-					<li><a href="#">BLOG				</a></li>
-					<li><a href="#">OTHER PRODUCTS	</a></li>
-					<li><a href="#">ABOUT US			</a></li>
-					<li><a href="#">WHERE TO BUY		</a></li>
-					<li><a href="#">CONTACT US		</a></li>
-				</ul>
-			</nav>
-
-			<section class="body-container">
-				<div class="col-md-4 columnFirsth">
-					<h1>X-PLOSION</h1>
-					<h2>SODA FOR SUPERHEROES</h2>
-					<p><b class="pink">Try a healthy alternatice to the current artifical drinks - your mind, body and tongue will thank you!</b></p>
+			<form id="searchForm" action="#">
+				<input type="search" placeholder="Search X-PLOSION...">
+				<button>SEARCH</button>
+			</form>
+			<button class="hamburger">&#9776;</button>
+  			<button class="cross">&#735;</button>
+		</header>
+		<nav role="navigation">
+			<ul class="menu" role="menubar">
+				<li class="active"><a href="#">HOME</a></li>
+				<li><a href="#">BLOG</a></li>
+				<li><a href="#">OUR PRODUCTS</a></li>
+				<li><a href="#">ABOUT US</a></li>
+				<li><a href="#">WHERE TO BUY</a></li>
+				<li><a href="#">CONTACT US</a></li>
+			</ul>
+		</nav>
+		<div class="container" role="main">
+			
+			<div class="column-2 column">
+				<h1>X-PLOSION</h1>
+				<h2>SODA FOR SUPERHEROES</h2>
+				<p><strong class="pink">Try a healthy alternatice to the current artifical drinks - your mind, body and tongue will thank you!</strong></p>
 					<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum </p>
-				</div>
-				<div class="col-md-4">
-					<img src="images/bottle1.png" alt="bootle">
-				</div>
+				
+			</div>
+			<div class="column-1 column">
+				<img src="images/bottle1.png" alt="bootle">
+			</div>
 
-				<div class="col-md-4 moveRight">
-					<div class="follow rightMenu">
-						<h3>FOLLOW US</h3>
-						<div class ="menuRightValue">
-							<a href="www.facebook.com"><img src="images/FB-f-Logo__blue_100.png">facebook</a>
-							<a href="www.twitter.com"><img src="images/Twitter-Logo-Icon-by-Jon-Bennallick-02.png">twitter</a>
-							<a href="www.google.com"><img src="images/google_plus_logo.png">google+</a>
-						</div>
+			<aside class="col-md-4 moveRight">
+				<div id="follow-us" class="follow rightMenu">
+					<h3>FOLLOW US</h3>
+					<div class ="menuRightValue">
+						
+						<a class="FB-f-Logo__blue_100 small-sprites" href="www.facebook.com">Facebook</a>
+						<a class="Twitter-Logo-Icon-by-Jon-Bennallick-02 small-sprites" href="www.twitter.com">Twitter</a>
+						<a class="google_plus_logo small-sprites" href="www.google.com">Google+</a>
 						
 					</div>
+					
+				</div>
 
-					<div class ="random rightMenu">
-						<h3>RANDOMLY SELECTED</h3>
-						<div class ="menuRightValue">
-							<ul>
-								<li><a href="#">XPLOSION is a hit in Japan		</a></li>
-								<li><a href="#">3 new flavours added 			</a></li>
-								<li><a href="#">Check our new promo in Youtube	</a></li>
-								<li><a href="#">We say No to artifical flavour 	</a></li>
-								<li><a href="#">X-PLOSION and your health 		</a></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="contact rightMenu">
-						<h3>WHERE YOU CAN FIND US?</h3>
-						<div class ="menuRightValue">
-							<p><b>X-Plosion Ltd</b></p>
-							<p>9 Danbury Road</p>
-							<p>WIliton</p>
-							<p>CT 06897</p>
-						</div>
+				<div class ="random rightMenu">
+					<h3>RANDOMLY SELECTED</h3>
+					<div  class ="menuRightValue">
+						<ul>
+							<li><a href="#">XPLOSION is a hit in Japan		</a></li>
+							<li><a href="#">3 new flavours added 			</a></li>
+							<li><a href="#">Check our new promo in Youtube	</a></li>
+							<li><a href="#">We say No to artifical flavour 	</a></li>
+							<li><a href="#">X-PLOSION and your health 		</a></li>
+						</ul>
 					</div>
 				</div>
-				<div class="col-md-8">
-					<div class="slider">
-						<div><img class="sliderImg" src="images/pict1.png"></div>
-						<div><img class="sliderImg" src="images/pict2.png"></div>
-						<div><img class="sliderImg" src="images/pict3.png"></div>
-						<div><img class="sliderImg" src="images/pict4.png"></div>
-						<div><img class="sliderImg" src="images/pict5.png"></div>
-						<div><img class="sliderImg" src="images/pict6.png"></div>	
+
+				<div class="contact rightMenu">
+					<h3>WHERE YOU CAN FIND US?</h3>
+					<div class ="menuRightValue">
+						<p><b>X-Plosion Ltd</b></p>
+						<p>9 Danbury Road</p>
+						<p>WIliton</p>
+						<p>CT 06897</p>
 					</div>
 				</div>
-			</section>
+			</aside>
+			<div class="col-3">
+				<div class="slider">
+					<div><img role="img" class="sliderImg" alt="x-plosion img1" src="images/pict1.png"></div>
+					<div><img role="img" class="sliderImg" alt="x-plosion img2" src="images/pict2.png"></div>
+					<div><img role="img" class="sliderImg" alt="x-plosion img3" src="images/pict3.png"></div>
+					<div><img role="img" class="sliderImg" alt="x-plosion img4" src="images/pict4.png"></div>
+					<div><img role="img" class="sliderImg" alt="x-plosion img5" src="images/pict5.png"></div>
+					<div><img role="img" class="sliderImg" alt="x-plosion img6" src="images/pict6.png"></div>	
+				</div>
+			</div>
 		</div>
-		
-		<script type="text/javascript" src="js/slick/slick.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/slick/slick.min.js"></script>	
+		<script src="js/main.js"></script>
+		<script src="js/hamburger.js"></script>
 	</body>
 </html>
