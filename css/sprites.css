@@ -1,11 +1,11 @@
 .FB-f-Logo__blue_100:before, .Twitter-Logo-Icon-by-Jon-Bennallick-02:before,.google_plus_logo:before{
 	background: url(../images/sprites.png) no-repeat;
-	display: inline-block;
+	float:left;
+    display:block;
 	content: '';
-    display: inline-block;
     height: 35px;
     width: 35px;
-    padding-right: 39px;
+    margin-right: 10px
 }
 
 .FB-f-Logo__blue_100:before{

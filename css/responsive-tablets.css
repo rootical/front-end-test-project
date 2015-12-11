@@ -1,130 +1,58 @@
-@media only screen 
-	and (orientation: portrait) 
-	and (max-device-width: 590px)  {
-	.container {
-		margin-top:80px;
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-box-orient: vertical;
-		-moz-box-orient: vertical;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		/* optional */
-		-webkit-box-align: start;
-		-moz-box-align: start;
-		-ms-flex-align: start;
-		-webkit-align-items: flex-start;
-		align-items: flex-start;
-	 }
-
-	.container .column-1 {
-	    -webkit-box-ordinal-group: 1;
-	    -moz-box-ordinal-group: 1;
-	    -ms-flex-order: 1;
-	    -webkit-order: 1;
-	    order: 1;
-	}
-
-	.container .column-2 {
-		-webkit-box-ordinal-group: 2;
-		-moz-box-ordinal-group: 2;
-		-ms-flex-order: 2;
-		-webkit-order: 2;
-		order: 2;
-	}
-	
-	.container aside {
-		-webkit-box-ordinal-group: 3;
-		-moz-box-ordinal-group: 3;
-		-ms-flex-order: 3;
-		-webkit-order: 3;
-		order: 3;
-		width: 100%;
-
-	}
-
-	.container .col-3 {
-		-webkit-box-ordinal-group: 4;
-		-moz-box-ordinal-group: 4;
-		-ms-flex-order: 4;
-		-webkit-order: 4;
-		order: 4;
-	}
-	.column-1{
-		margin-top:80px;
-	}
-}
 
 
 /* ----------- iPad mini ----------- */
 
 /* Portrait and Landscape */
 @media only screen 
-	and (min-device-width: 768px) 
-	and (max-device-width: 1024px) 
-	and (-webkit-min-device-pixel-ratio: 1) {
-		.container{
-			margin-top:80px;
-		}
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
 }
 
 /* Portrait */
 @media only screen 
-	and (min-device-width: 768px) 
-	and (max-device-width: 1024px) 
-	and (orientation: portrait) 
-	and (-webkit-min-device-pixel-ratio: 1) {
-		.container{
-			margin-top:80px;
-		}
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
 }
 
 /* Landscape */
 @media only screen 
-	and (min-device-width: 768px) 
-	and (max-device-width: 1024px) 
-	and (orientation: landscape) 
-	and (-webkit-min-device-pixel-ratio: 1) {
-		.container{
-			margin-top:80px;
-		}
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
 }
 
 /* ----------- iPad 1 and 2 ----------- */
 /* Portrait and Landscape */
 @media only screen 
-	and (min-device-width: 768px) 
-	and (max-device-width: 1024px) 
-	and (-webkit-min-device-pixel-ratio: 1) {
-		.container{
-			margin-top:80px;
-		}
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
 }
 
 /* Portrait */
 @media only screen 
-	and (min-device-width: 768px) 
-	and (max-device-width: 1024px) 
-	and (orientation: portrait) 
-	and (-webkit-min-device-pixel-ratio: 1) {
-		.container{
-			margin-top:80px;
-		}
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
 }
 
 /* Landscape */
 @media only screen 
-	and (min-device-width: 768px) 
-	and (max-device-width: 1024px) 
-	and (orientation: landscape) 
-	and (-webkit-min-device-pixel-ratio: 1) {
-		.container{
-			margin-top:80px;
-		}
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
 }
 
 /* ----------- iPad 3 and 4 ----------- */
@@ -133,124 +61,87 @@
 	and (min-device-width: 768px) 
 	and (max-device-width: 1024px) 
 	and (-webkit-min-device-pixel-ratio: 2) {
-		.container{
-			margin-top:80px;
+		.img-logo{
+			float: left;
 		}
-		#follow-us a {
-			float: none;
-			width:100px;
-		}
-		.hamburger{
+		.img-center{
 			display: none;
-		}
-		.cross{
-			display: none;
+			width: 300px;
+			margin: auto;
 		}
 		.menu{
-			display: block;
-			box-sizing: border-box;
-			margin: auto;
-			padding: 0;
-			background-color: #EB0951;
 			display: table;
 			table-layout: fixed; /* optional, for equal spacing */
-    		border-collapse: collapse;
-    		background: none;
-		} 
+    		border-spacing: 0; /* Removes the cell spacing via CSS */
+  			border-collapse: collapse;
+
+		}
 		.menu li {
 			float:none;
 			background-color: #EB0951;
 			display: table-cell;
 		   text-align: center;
 		   vertical-align: middle;
-		}
-		.menu{
-			top: 70px;
-		}
-		.column-1{
-			width: 50%;
-			float: left;
-			margin-top: 80px;
-		}
-		.column-2{
-			width: 50%;
-			float: left;
-			margin-top: 100px;
-			overflow: hidden;
-		}
-		aside{
-			width: 100%;
-			overflow: hidden;
-		}
-		.rightMenu{
-			width: 30%;
-			float: left;
-			margin-right: 2%;
-		}
-		.rightMenu:first-of-type{
-			margin-left: 3%;
-		}
-		.rightMenu:last-of-type{
-			margin-right: 3%;
-		}
-		.sliderImg {
-		    margin: auto 40px;
-		    width: 250px;
+		   border-right-style: dotted;
+  			border-right-width: 1px;
+  			border-color: #EAE2D7;
 		}
 
-		.slick-prev {
-	   	left: 0px; 
-		}
-
-		.slider {
-		    padding-bottom: 20px;
-		    padding-top: 20px;
-		    width: 100%;
-		}
-
-		.slick-slider {
-			margin-bottom: 0px;
-		}
-
-		.slick-next {
-		   right: 0px;
-		}
-		.col-3{
-			margin-top: 40px;
-		}
-		.img-center{
-			margin-top: 0;
+		#follow-us a{
 			float: left;
 		}
-		.img-logo{
-			width: 33%;
-			float: left;
+
+		.right-block-items {
+		   margin: auto;
+		   display: block;
+		   width: 430px;
+		}
+
+		.hamburger{
+			display: none;
+		}
+			
+		.cross{
+			display: none;
 		}
 
 		#searchForm{
-			display: block;
 			float: right;
+			display: block;
 		}
 
-		#searchForm button{
-			line-height: 0px;
-		   border: 0px;
-		   height: 20px;
-		   background-color: #EB0951;
+		#searchForm>button{
+			background-color: #EB0951;
+		   width: 100px;
 		   color: white;
-		   border-radius: 10px;
-		   font-size: 0.7em;
-		   margin-right: 10px;
-		   padding: 12px;
+		   line-height: 15px;
+		   height: 30px;
+		   position: initial;
+		   /* float: right; */
+		   font-size: 0.9em;
 		   box-sizing: border-box;
+		   border: none;
+		   border-radius: 10px;
+		   padding: 5px 20px;
+		   font-size: small;
 		}
 
-		#searchForm input[type=search]{
-			border-radius: 5px;
-		   border: 1px solid #EAE2D7;
-		   color: black;
-		   font-size: 0.8em;
-		   padding: 4px 20px 4px 10px;
+		input[type="search"]{
+			border-radius: 10px;
+		   border-color: #BFB2B2;
+		   padding: 4px 1px 4px 10px;
+		   box-sizing: border-box;
+		   border-width: 1px;
+		}
+	
+		.column-1 img {
+			width: 500px;
+		}
+
+		.col-3 {
+			margin-top: 40px;
+			float:none;
+			overflow:hidden;
 		}
 
 }
@@ -261,21 +152,7 @@
 	and (max-device-width: 1024px) 
 	and (orientation: portrait) 
 	and (-webkit-min-device-pixel-ratio: 2) {
-		.rightMenu{
-			margin-left: 3%;
-			width: 44%;
-		}
-		#follow-us{
-			width: 94%;
-		}
-		.img-center{
-			display: none;
-		}
-		.img-logo h1 {
-		    margin-left: 0px;
-		    font-size: 2.8em;
-		}
-		
+
 }
 
 /* Landscape */
@@ -284,10 +161,52 @@
 	and (max-device-width: 1024px) 
 	and (orientation: landscape) 
 	and (-webkit-min-device-pixel-ratio: 2) {
-		
+		aside{
+			overflow: hidden;
+			float:none;
+		}
+		section{
+			overflow:hidden;
+		}
+		.column-1 {
+			width:50%;
+			float:left;
+		}
+		.right-block{
+			width:30%;
+			float:left;
+			margin-right:2%;
+		}
+
+		.right-block:first-of-type{
+			margin-left: 3%;
+		}
+
+		.right-block:last-of-type{
+			margin-right: 3%;
+		}
+		#follow-us a{
+			float: none;
+		}
+		.right-block-items {
+		   width: 100%;
+		}
 }
 
-.active{
-	background-color: black!important;
-	border-bottom: 0px!important;
+@media only screen and (min-device-width: 1200px)
+    and (max-device-width: 1600px)
+    and (-webkit-device-pixel-ratio: 1.5) {
+
+    }
+
+
+@media screen 
+    and (max-device-width: 601px)
+    and (orientation : portrait) 
+    and (-webkit-min-device-pixel-ratio: 2){
+
+        body{
+            font-size: 120%;
+        }
+
 }
