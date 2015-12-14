@@ -1,0 +1,16 @@
+#menu-first-elements {
+    border-radius: 7px 0px 0px 7px;
+}
+
+#menu-last-elements {
+    border-radius: 0px 7px 7px 0px;
+}
+
+.menu {
+    border-radius: 7px;
+    background-color: #EB0951!important;
+}
+
+* {
+    behavior: url(/bower_components/css3pie/PIE.htc);
+}
