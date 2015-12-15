@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" type="text/css" href="js/slick/slick.css" />
@@ -25,41 +26,42 @@
 	    <script  src="js/jquery.corner.js"></script>
 	    
 	<![endif]-->
+
 </head>
 
 <body role="document">
-    <div class="container" role="main">
+    <div class="main-container" role="main">
         <header id="main-header" role="banner">
-            <a href="#" class="img-logo">
+            <a href="#" id="img-logo" class="img-logo">
                 <h1>X-PLOSION</h1>
                 <h2>SODA THAT POPS FLAVOURS TO EXPLODE</h2>
             </a>
-            <div class="img-center">
+            <div id="img-center">
                 <h1>X-PLOSION</h1>
                 <h2>SODA FOR SUPERHEROES</h2>
             </div>
-            <form id="searchForm" action="#">
+            <form id="search-form" action="#">
                 <input type="search" placeholder="Search X-PLOSION...">
                 <button type="submit">SEARCH</button>
             </form>
             <button type="button" class="hamburger">&#9776;</button>
             <button type="button" class="cross">&#735;</button>
+            <nav role="navigation">
+                <ul id="main-menu" class="menu" role="menubar">
+                    <li id="menu-first-elements" class="active"><a href="#">HOME</a></li>
+                    <li><a href="javascript:void(0)">BLOG</a></li>
+                    <li><a href="javascript:void(0)">OUR PRODUCTS</a></li>
+                    <li><a href="javascript:void(0)">ABOUT US</a></li>
+                    <li><a href="javascript:void(0)">WHERE TO BUY</a></li>
+                    <li id="menu-last-elements"><a href="javascript:void(0)">CONTACT US</a></li>
+                </ul>
+            </nav>
         </header>
-        <nav role="navigation">
-            <ul class="menu" role="menubar">
-                <li id="menu-first-elements" class="active"><a href="#">HOME</a></li>
-                <li><a href="javascript:void(0)">BLOG</a></li>
-                <li><a href="javascript:void(0)">OUR PRODUCTS</a></li>
-                <li><a href="javascript:void(0)">ABOUT US</a></li>
-                <li><a href="javascript:void(0)">WHERE TO BUY</a></li>
-                <li id="menu-last-elements" ><a href="javascript:void(0)">CONTACT US</a></li>
-            </ul>
-        </nav>
         <section>
-            <div class="column-1 column">
+            <div id="column-img" class="column-6">
                 <img src="images/bottle1.png" alt="bootle">
             </div>
-            <div class="column-2 column">
+            <div id="column-text" class="column-6">
                 <h1>X-PLOSION</h1>
                 <h2>SODA FOR SUPERHEROES</h2>
                 <p><strong class="pink">Try a healthy alternatice to the current artifical drinks - your mind, body and tongue will thank you!</strong></p>
@@ -89,13 +91,16 @@
             </div>
             <div class="contact right-block">
                 <h3>WHERE YOU CAN FIND US?</h3>
-                <div class="right-block-items">
+                <div id="find-us" class="right-block-items">
                     <p><b>X-Plosion Ltd</b></p>
                     <p>9 Danbury Road</p>
                     <p>WIliton</p>
                     <p>CT 06897</p>
                 </div>
             </div>
+            <!--             <div class="contact right-block">
+                <div><img role="img" class="sliderImg" alt="x-plosion img1" src="images/pict1.png"></div>
+            </div> -->
         </aside>
         <div class="col-3">
             <div class="slider">
@@ -108,7 +113,6 @@
             </div>
         </div>
     </div>
-
     <script type="text/javascript" src="js/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/hamburger.js"></script>

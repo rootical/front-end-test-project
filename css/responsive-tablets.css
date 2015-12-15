@@ -1,69 +1,33 @@
-/* ----------- iPad mini ----------- */
-
-
-/* Portrait and Landscape */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}
-
-
-/* Portrait */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {}
-
-
-/* Landscape */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {}
-
-
-/* ----------- iPad 1 and 2 ----------- */
-
-
-/* Portrait and Landscape */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}
-
-
-/* Portrait */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {}
-
-
-/* Landscape */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {}
-
-
-/* ----------- iPad 3 and 4 ----------- */
-
-
 /* Portrait and Landscape */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-    .img-logo {
+    .menu {
+        position: static;
+    }
+    #img-logo {
         float: left;
     }
-    .img-center {
+    #img-center {
         display: none;
-        width: 300px;
-        margin: auto;
     }
-    .menu {
+    #main-header {
+        height: initial;
+    }
+    #main-menu {
         display: table;
         table-layout: fixed;
-        /* optional, for equal spacing */
         border-spacing: 0;
-        /* Removes the cell spacing via CSS */
         border-collapse: collapse;
     }
-    .menu li {
+    #main-menu li {
         background-color: #EB0951;
         display: table-cell;
         text-align: center;
         vertical-align: middle;
-        border-right-style: dotted;
-        border-right-width: 1px;
-        border-color: #EAE2D7;
+        border-right: 1px dotted #eae2d7;
+    }
+    .menu li {
+        line-height: 25px;
     }
     #follow-us a {
         float: left;
@@ -79,11 +43,11 @@
     .cross {
         display: none;
     }
-    #searchForm {
+    #search-form {
         float: right;
         display: block;
     }
-    #searchForm>button {
+    #search-form>button {
         background-color: #EB0951;
         width: 100px;
         color: white;
@@ -105,20 +69,20 @@
         box-sizing: border-box;
         border-width: 1px;
     }
-    .column-1 img {
+    #column-img img {
         width: 500px;
     }
     .col-3 {
         margin-top: 40px;
         float: none;
-        overflow: hidden;
+
+    }
+    .col-3:after {
+      content:"";
+      display:table;
+      clear:both;
     }
 }
-
-
-/* Portrait */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {}
 
 
 /* Landscape */
@@ -131,7 +95,7 @@
     section {
         overflow: hidden;
     }
-    .column-1 {
+    #column-img {
         width: 50%;
         float: left;
     }
@@ -153,8 +117,6 @@
         width: 100%;
     }
 }
-
-@media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-device-pixel-ratio: 1.5) {}
 
 @media screen and (max-device-width: 601px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
     body {

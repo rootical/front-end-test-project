@@ -6,11 +6,11 @@
     border-radius: 0px 7px 7px 0px;
 }
 
-.menu {
+#main-menu {
     border-radius: 7px;
     background-color: #EB0951!important;
 }
 
 * {
-    behavior: url(/bower_components/css3pie/PIE.htc);
+    behavior: url("/bower_components/css3pie/PIE.htc");
 }

@@ -1,48 +1,44 @@
 /* ----------- Non-Retina Screens ----------- */
 
 @media screen and (min-device-width: 1200px) {
-    .container {
+    .main-container {
         width: 960px;
         margin: auto;
     }
-
+    #img-center {
+        display: block
+    }
     .hamburger,
     .cross {
         display: none;
     }
-
     section {
         width: 70%;
         float: left;
     }
-
-    .column-1 {
+    .column-6 {
         width: 50%;
+    }
+    #column-img {
         float: right;
     }
-
-    .column-2 {
-        width: 50%;
+    #column-text {
         float: left;
     }
-
     .column {
         margin-top: 80px;
     }
-
     #main-header {
         text-align: center;
         height: 100px;
         position: static;
         background: none;
     }
-
     aside {
         overflow: hidden;
         float: right;
         width: 30%;
     }
-
     .col-3 {
         margin-top: 40px;
         float: left;
@@ -50,82 +46,65 @@
         padding-right: 26px;
         box-sizing: border-box;
     }
-
-    .img-logo {
+    #img-logo {
         float: left;
         margin-top: 15px;
         height: 70px;
     }
-
-    .img-logo h1 {
+    #img-logo h1 {
         line-height: normal;
     }
-
-    .img-center {
+    #img-center {
         display: inline-block;
         width: 300px;
         margin: auto;
         margin-top: 15px;
         box-sizing: border-box;
     }
-
-    .menu {
-    	display:block;
+    #main-menu {
+        display: block;
         background: none;
         position: static;
         table-layout: fixed;
-        /* optional, for equal spacing */
         border-spacing: 0;
-        /* Removes the cell spacing via CSS */
         border-collapse: collapse;
     }
-
-    .menu li {
-    	position:relative;
-		z-index: 0;
+    #main-menu li {
+        position: relative;
+        z-index: 0;
         background-color: #EB0951;
         text-align: center;
-        vertical-align: middle;
-        border-right-style: dotted;
-        border-right-width: 1px;
-        border-color: #EAE2D7;
-        float:left;
-        box-sizing:border-box;
-        width:160px;
+        border-right: 1px dotted #eae2d7;
+        float: left;
+        box-sizing: border-box;
+        width: 160px;
     }
-
     .right-block h3 {
         margin: 0;
         text-align: left;
     }
-
     .right-block-items ul {
         margin: 0;
     }
-
-    .menu li:first-of-type {
+    #main-menu li:first-of-type {
         border-radius: 7px 0px 0px 7px;
     }
-
-    .menu li:last-of-type {
+    #main-menu li:last-of-type {
         border-radius: 0px 7px 7px 0px;
     }
-
-    .column-1 img {
+    #column-img img {
         width: 120%;
         margin: auto;
         display: block;
         margin-left: -20%;
     }
-
-    #searchForm {
+    #search-form {
         margin-top: 15px;
         float: right;
         display: block;
         /* need for clear display:none; */
     }
-
-    #searchForm>button {
+    #search-form>button {
         background-color: #EB0951;
         width: 100px;
         color: white;
@@ -140,7 +119,6 @@
         padding: 5px 20px;
         font-size: small;
     }
-
     input[type="search"] {
         border-radius: 10px;
         border-color: #BFB2B2;
@@ -148,8 +126,7 @@
         box-sizing: border-box;
         border-width: 1px;
     }
-
-    .img-logo h2 {
+    #img-logo h2 {
         margin: 0;
         display: block;
         line-height: 0.1em;
@@ -158,19 +135,26 @@
         margin-left: 20px;
         color: black;
     }
-
     .sliderImg {
         width: 225px;
+    }
+    #find-us {
+        width: initial;
+    }
+    .right-block-items{
+        overflow: hidden;
     }
 }
 
 
-/* ----------- Retina Screens ----------- */
 
-@media screen and (min-device-width: 1200px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {}
 
 @media screen and (min-device-width: 1600px) {
-    .container {
+    #column-img img {
+        width: 100%; 
+        margin-left: 0%; 
+    }
+    .main-container {
         width: 1200px;
     }
     #follow-us a {
@@ -179,8 +163,8 @@
         font-size: 0.9em;
         width: auto;
     }
-    .menu li {
-		width:200px;
+    #main-menu li {
+        width: 200px;
     }
 }
 

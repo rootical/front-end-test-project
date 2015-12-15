@@ -1,7 +1,7 @@
 .FB-f-Logo__blue_100:before,
 .Twitter-Logo-Icon-by-Jon-Bennallick-02:before,
 .google_plus_logo:before {
-    background: url(../images/sprites.png) no-repeat;
+    background: url("../images/sprites.png") no-repeat;
     float: left;
     display: block;
     content: '';
