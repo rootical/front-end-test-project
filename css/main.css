@@ -1,8 +1,18 @@
 /*hamburger script*/
 
+@font-face {
+    font-family: 'StarWars';
+    src: url("../font/Antonio-Regular.ttf");
+}
+
 * {
     zoom: 1;
     box-sizing: border-box;
+}
+
+#img-center,
+#img-logo {
+    font-family: StarWars;
 }
 
 body {
@@ -27,7 +37,6 @@ section {
 }
 
 #main-header {
-    /*top: 0px;*/
     width: 100%;
     background: #FFFFFF;
     height: 70px;
@@ -95,8 +104,8 @@ section {
     color: #fff;
 }
 
-.menu li:hover{
-	cursor:pointer;
+.menu li:hover {
+    cursor: pointer;
 }
 
 .menu ul li a:hover {
@@ -133,7 +142,7 @@ section {
 }
 
 
-/*	allscritpet*/
+/*  allscritpet*/
 
 a {
     text-decoration: none;
@@ -171,7 +180,6 @@ li {
 
 #img-logo h1 {
     margin-left: 20px;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 #img-center {
@@ -197,10 +205,10 @@ li {
 #img-center h2 {
     line-height: 1em;
     margin-top: 0;
-    text-transform: rotate(-5deg) translateY(-10px) translateX(2px);
-    -ms-transform: rotate(-5deg) translateY(-10px) translateX(2px);
-    -webkit-transform: rotate(-5deg) translateY(-10px) translateX(2px);
-    transform: rotate(-5deg) translateY(-10px) translateX(2px);
+    text-transform: rotate(-5deg) translateY(-10px) translateX(10px);
+    -ms-transform: rotate(-5deg) translateY(-10px) translateX(10px);
+    -webkit-transform: rotate(-5deg) translateY(-10px) translateX(10px);
+    transform: rotate(-5deg) translateY(-10px) translateX(10px);
     white-space: nowrap;
 }
 
