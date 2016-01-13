@@ -10,7 +10,7 @@ Convert the following parts of X-Plosion web site to HTML/CSS/JS. **Do not code 
 ![X-Plosion](xplosion.jpg)
 
 ## Requirements
-1. Generate initial application with yeoman generator, for instance generator-modern-frontend.
+1. Create initial structure. Use gulp and node-sass. Use mobile-first approach.
 2. Use HTML5 / SASS
 3. Use bower as third parties lib manager
 4. Create page called Home and place the elements on it
