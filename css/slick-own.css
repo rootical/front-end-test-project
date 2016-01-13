@@ -1,0 +1,42 @@
+.slick-prev::before {
+    content: url("../images/arrow-left.png");
+}
+
+.slick-next::before {
+    content: url("../images/arrow-right.png");
+}
+
+.slick-prev, .slick-next{
+    height: 56px;
+    width: 41px;
+}
+
+.slider {
+
+    background-color: #CABAAA;
+    border-radius: 10px;
+}
+
+.slick-slide {
+    outline: none
+}
+.sliderImg {
+    width: 250px;
+    padding:10px;
+    box-sizing:border-box;
+}
+
+.slick-prev {
+    z-index:1;
+}
+
+.slick-slide img {
+    margin: auto;
+}
+
+.slick-next {
+    right: 0px;
+}
+.slick-prev {
+    left: 1px;
+}

@@ -1,0 +1,52 @@
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    #follow-us a {
+        float: left;
+    }
+    .right-block-items {
+        margin: auto;
+        width: 430px;
+    }
+}
+
+/* ----------- iPhone 6 ----------- */
+
+
+/* Landscape */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    #follow-us a {
+        float: left;
+    }
+    .right-block-items {
+        margin: auto;
+        width: 430px;
+    }
+    .sliderImg {
+        padding: 30px;
+    }
+}
+
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    #follow-us a {
+        float: left;
+    }
+    .right-block-items {
+        margin: auto;
+        width: 430px;
+    }
+}
+
+@media only screen and (max-device-width: 736px) {
+    .img-logo h1 {
+        margin-left: 0px;
+    }
+}
