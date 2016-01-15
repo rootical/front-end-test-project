@@ -7,6 +7,11 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+// global
 body {
   background: $color-background;
   font-family: Arial, sans-serif;
@@ -14,18 +19,118 @@ body {
   color: $color-text;
 }
 
-.wrapper {
-  padding: 50px 0;
+input:focus, button:focus {
+  outline:0 !important;
 }
 
+.button {
+  display: inline-block;
+  padding: 11px;
+  background-color: $color-razzmatazz;
+  background-image: linear-gradient(to top, $color-razzmatazz 0%, $color-razzmatazz 50%, $color-radical-red 100%);
+  border: 0;
+  border-radius: 9px;
+  box-shadow: 1.4px 1.4px 0 rgba(0, 0, 0, 0.15);
+  text-shadow: -0.7px -0.7px 0 rgba(0, 0, 0, 0.2);
+  color: $color-white;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  cursor: pointer;
+  &.small {
+    font-size: 1.1em;
+    padding: 8px;
+  }
+}
+
+// header
+.main-header {
+  padding-bottom: $gutter*2;
+  .top {
+    padding: $gutter*2 $gutter;
+    text-align: center;
+    @include mq($medium-device) {
+      padding: $gutter*2 0 $gutter*2 $gutter;
+    }
+    h1 {
+      @include mq($medium-device) {
+        float: left;
+      }
+    }
+    .banner {
+      display: inline-block;
+    }
+    .search {
+      input {
+        border: 0;
+        padding: 10px;
+        margin-right: 10px;
+        max-width: 215px;
+        height: 29px;
+        background-color: $color-white;
+        border-radius: 9px;
+        box-shadow: inset 1.4px 1.4px 0 rgba(0, 0, 0, 0.23);
+        color: $color-text;
+      }
+      @include mq($medium-device) {
+        float: right;
+      }
+    }
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    @include mq($medium-device) {
+      position: static;
+    }
+    ul {
+      width: 100%;
+      list-style: none;
+      background-color: $color-razzmatazz;
+      background-image: linear-gradient(to top, $color-razzmatazz 0%, $color-razzmatazz 50%, $color-radical-red 100%);
+      @include mq($medium-device) {
+        display: table;
+        table-layout: fixed;
+        border-radius: 9px;
+        box-shadow: 2.5px 1.7px 0 rgba(0, 0, 0, 0.15);
+      }
+      li {
+        text-align: center;
+        @include mq($medium-device) {
+          display: table-cell;
+          vertical-align: middle;
+        }
+        a {
+          display: block;
+          width: 100%;
+          padding: 23px 5px;
+          text-shadow: -0.7px -0.7px 0 rgba(0, 0, 0, 0.2);
+          color: $color-white;
+          font-size: 1.2em;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  #nav-toggle {
+    @include mq($medium-device) {
+      display: none;
+    }
+  }
+}
+
+// content
 .row {
-  background-color: $color-white;
-  @include border-radius(15px);
+  border-radius: 15px;
 }
 
 section {
   background: $color-white;
-  @include border-radius(15px);
+  margin-bottom: $gutter;
+  border-radius: 15px;
   header {
     padding: $gutter;
     position: relative;
@@ -50,7 +155,8 @@ section {
     &.color {
       background: $color-razzmatazz;
       color: $color-white;
-      @include border-top-radius(inherit);
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
       &:after {
         background: $color-grey-light;
         height: 2px;
@@ -59,39 +165,43 @@ section {
   }
   &.left {
     position: relative;
-    @include border-bottom-right-radius(0);
-    &:after {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      content: "";
-      display: block;
-      width: 1px;
-      height: 100%;
-      background-image: linear-gradient(to bottom, $color-akaroa 20%, rgba(255, 255, 255, 0) 0%);
-      background-position: left;
-      background-size: 1px 5px;
-      background-repeat: repeat-y;
+    @include mq($large-device) {
+      border-bottom-right-radius: 0;
+      &:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        content: "";
+        display: block;
+        width: 1px;
+        height: 100%;
+        background-image: linear-gradient(to bottom, $color-akaroa 20%, rgba(255, 255, 255, 0) 0%);
+        background-position: left;
+        background-size: 1px 5px;
+        background-repeat: repeat-y;
+      }
     }
     header {
       &.color {
         @include mq(900px) {
-          @include border-top-left-radius(inherit);
-          @include border-top-right-radius(0);
+          border-top-left-radius: inherit;
+          border-top-right-radius: 0;
         }
       }
     }
   }
   &.right {
-    @include border-bottom-left-radius(0);
     header {
       &.color {
-        @include mq(900px) {
-          @include border-top-left-radius(0);
-          @include border-top-right-radius(inherit);
+        @include mq($large-device) {
+          border-top-left-radius: 0;
+          border-top-right-radius: inherit;
         }
       }
+    }
+    @include mq($large-device) {
+      border-bottom-left-radius: 0;
     }
   }
   .blocks {
