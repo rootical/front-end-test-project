@@ -7,16 +7,24 @@
   padding: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
 // global
 body {
   background: $color-background;
   font-family: Arial, sans-serif;
   font-size: 10px;
   color: $color-text;
+}
+
+a {
+  text-decoration: none;
+  color: $color-text;
+  &:hover {
+    color: $color-text-hover;
+  }
+}
+
+i {
+  display: inline-block;
 }
 
 input:focus, button:focus {
@@ -102,7 +110,7 @@ input:focus, button:focus {
         display: table;
         table-layout: fixed;
         border-radius: 9px;
-        box-shadow: 2.5px 1.7px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
       }
       li {
         text-align: center;
@@ -162,12 +170,21 @@ input:focus, button:focus {
 // content
 .row {
   border-radius: 15px;
+  @include mq($large-device) {
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.05);
+    background: $color-white;
+  }
 }
 
 section {
   background: $color-white;
   margin-bottom: $gutter;
   border-radius: 15px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.05);
+  @include mq($large-device) {
+    margin-bottom: 0;
+    box-shadow: none;
+  }
   header {
     padding: $gutter;
     position: relative;
@@ -180,13 +197,15 @@ section {
       @include dotted-line(bottom, $color-akaroa);
     }
     &.color {
-      background: $color-razzmatazz;
+      background-color: $color-razzmatazz;
+      background-image: linear-gradient(to top, $color-razzmatazz 0%, $color-razzmatazz 50%, $color-radical-red 100%);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
       color: $color-white;
+      text-shadow: -0.7px -0.7px 0 rgba(0, 0, 0, 0.2);
       border-top-left-radius: inherit;
       border-top-right-radius: inherit;
       &:after {
-        background: $color-grey-light;
-        height: 2px;
+        display: none;
       }
     }
   }
@@ -230,6 +249,18 @@ section {
         color: $color-text-dark;
         padding: $gutter/4 0;
       }
+      figure {
+        float: left;
+        border: 1px solid $color-brown-light;
+        padding: 2px;
+        img {
+          display: block;
+        }
+      }
+      p {
+        padding-left: 125px;
+        min-height: 105px;
+      }
     }
   }
 }
@@ -237,6 +268,7 @@ section {
 .sidebar {
   section {
     margin-bottom: $gutter;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.05);
     header {
       h3 {
         text-transform: uppercase;
@@ -249,6 +281,43 @@ section {
       padding: $gutter;
       font-size: 1.2em;
       line-height: 1.5;
+      ul.list {
+        list-style: none;
+        li {
+          padding: 3px 0;
+          &:before {
+            content: '';
+            display: inline-block;
+            margin-right: 10px;
+            @include sprite($icon-arrow-grey);
+          }
+        }
+      }
+      ul.social {
+        list-style: none;
+        li {
+          display: inline-block;
+          vertical-align: middle;
+          padding-bottom: 10px;
+          a {
+            margin-right: 15px;
+            i {
+              margin-right: 5px;
+              vertical-align: middle;
+              opacity: 0.9;
+              transition: all 0.3s ease-in-out;
+            }
+            span {
+              vertical-align: middle;
+            }
+            &:hover {
+              i {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

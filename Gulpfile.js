@@ -3,6 +3,10 @@ var sass = require('gulp-sass');
 var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('autoprefixer');
+var buffer = require('vinyl-buffer');
+var imagemin = require('gulp-imagemin');
+var merge = require('merge-stream');
+var spritesmith = require('gulp.spritesmith');
 var browserSync = require('browser-sync').create();
 
 // sass, postcss, autoprefixer task
@@ -14,6 +18,28 @@ gulp.task('styles', function() {
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./css/'))
     .pipe(browserSync.stream());
+});
+
+// sprite task
+gulp.task('sprite', function () {
+  var spriteData = gulp.src('temp/sprite/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: '_sprite.scss',
+    imgPath: '/images/sprite.png',
+    cssVarMap: function (sprite) {
+      sprite.name = 'icon-' + sprite.name;
+    }
+  }));
+
+  var imgStream = spriteData.img
+    .pipe(buffer())
+    .pipe(imagemin())
+    .pipe(gulp.dest('images/'));
+
+  var cssStream = spriteData.css
+    .pipe(gulp.dest('sass/'));
+
+  return merge(imgStream, cssStream);
 });
 
 // watch task
