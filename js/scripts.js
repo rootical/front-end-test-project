@@ -1,5 +1,8 @@
-document.querySelector( "#nav-toggle" )
-  .addEventListener("click", function(e) {
-    this.classList.toggle( "active" );
-    e.preventDefault();
-  });
+// document ready
+$(document).ready(function() {
+    $('#nav-toggle').on('click', function(e) {
+      $(this).toggleClass('active');
+      $('#main-nav').toggleClass('active');
+      e.preventDefault();
+    });
+});

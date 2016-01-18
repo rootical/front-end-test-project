@@ -47,7 +47,7 @@ input:focus, button:focus {
 .main-header {
   padding-bottom: $gutter*2;
   .top {
-    padding: $gutter*2 $gutter;
+    padding: $gutter/2 $gutter;
     text-align: center;
     @include mq($medium-device) {
       padding: $gutter*2 0 $gutter*2 $gutter;
@@ -61,6 +61,7 @@ input:focus, button:focus {
       display: inline-block;
     }
     .search {
+      margin-top: 16px;
       input {
         border: 0;
         padding: 10px;
@@ -78,12 +79,19 @@ input:focus, button:focus {
     }
   }
   nav {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 70px;
     width: 100%;
     z-index: 10;
+  	max-height: 0;
+    overflow-y: hidden;
+    &.active {
+      max-height: 500px;
+    }
     @include mq($medium-device) {
       position: static;
+      max-height: none;
+      overflow-y: visible;
     }
     ul {
       width: 100%;
@@ -101,16 +109,45 @@ input:focus, button:focus {
         @include mq($medium-device) {
           display: table-cell;
           vertical-align: middle;
+          &:first-child {
+            a {
+              border-top-left-radius: 9px;
+              border-bottom-left-radius: 9px;
+              &:before {
+                display: none;
+              }
+            }
+          }
+          &:last-child {
+            a {
+              border-top-right-radius: 9px;
+              border-bottom-right-radius: 9px;
+            }
+          }
         }
         a {
           display: block;
+          position: relative;
           width: 100%;
           padding: 23px 5px;
           text-shadow: -0.7px -0.7px 0 rgba(0, 0, 0, 0.2);
           color: $color-white;
-          font-size: 1.2em;
+          font-size: 1.4em;
           font-weight: 700;
           text-transform: uppercase;
+          &:hover {
+            background-color: #2a1f0f;
+            background-image: linear-gradient(to top, #2a1f0f 0%, #2a1f0f 50%, #53432c 100%, #53432c 100%);
+            &:before {
+              opacity: 0.3;
+            }
+          }
+          @include mq($medium-device) {
+            font-size: 1.2em;
+            &:before {
+              @include dotted-line(left, $color-mauvelous);
+            }
+          }
         }
       }
     }
@@ -140,17 +177,7 @@ section {
       font-size: 1.4em;
     }
     &:after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      content: "";
-      display: block;
-      width: 100%;
-      height: 1px;
-      background-image: linear-gradient(to right, $color-akaroa 20%, rgba(255, 255, 255, 0) 0%);
-      background-position: top;
-      background-size: 5px 1px;
-      background-repeat: repeat-x;
+      @include dotted-line(bottom, $color-akaroa);
     }
     &.color {
       background: $color-razzmatazz;
@@ -168,18 +195,7 @@ section {
     @include mq($large-device) {
       border-bottom-right-radius: 0;
       &:after {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        content: "";
-        display: block;
-        width: 1px;
-        height: 100%;
-        background-image: linear-gradient(to bottom, $color-akaroa 20%, rgba(255, 255, 255, 0) 0%);
-        background-position: left;
-        background-size: 1px 5px;
-        background-repeat: repeat-y;
+        @include dotted-line(right, $color-akaroa);
       }
     }
     header {

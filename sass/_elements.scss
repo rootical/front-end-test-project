@@ -2,18 +2,18 @@
 
 // nav toggle
 #nav-toggle {
-  position: fixed;
-  left: $gutter;
-  top: $gutter;
+  position: absolute;
+  left: $gutter/2;
+  top: $gutter/2;
   cursor: pointer;
-  padding: 10px 35px 16px 0px;
+  padding: 20px 45px 40px 10px;
   z-index: 11;
   span {
     cursor: pointer;
     border-radius: 1px;
     height: 5px;
     width: 35px;
-    background: white;
+    background: $color-razzmatazz;
     position: absolute;
     display: block;
     content: '';
@@ -22,7 +22,7 @@
       border-radius: 1px;
       height: 5px;
       width: 35px;
-      background: white;
+      background: $color-razzmatazz;
       position: absolute;
       display: block;
       content: '';
@@ -38,16 +38,20 @@
       transition: all 500ms ease-in-out;
     }
   }
-  &.active span {
-    background-color: transparent;
-    &:before, &:after {
-      top: 0;
-    }
-    &:before {
-      transform: rotate(45deg);
-    }
-    &:after {
-      transform: rotate(-45deg);
+  &.active {
+    background-color: $color-radical-red;
+    span {
+      background-color: transparent;
+      &:before, &:after {
+        background-color: $color-white;
+        top: 0;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
     }
   }
 }
