@@ -1,9 +1,28 @@
 /* elements */
 
+#search-toggle {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  cursor: pointer;
+  padding: 10px 10px 24px 10px;
+  z-index: 11;
+  svg {
+    width: 35px;
+    fill: $color-razzmatazz;
+  }
+  &.active {
+    background-color: $color-radical-red;
+    svg {
+      fill: $color-white;
+    }
+  }
+}
+
 // nav toggle
 #nav-toggle {
   position: absolute;
-  left: $gutter/2;
+  left: 0;
   top: $gutter/2;
   cursor: pointer;
   padding: 20px 45px 40px 10px;
