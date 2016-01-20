@@ -16,7 +16,7 @@ gulp.task('styles', function() {
     .pipe(sourcemaps.init())
     .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./css/'))
+    .pipe(gulp.dest('./public/css/'))
     .pipe(browserSync.stream());
 });
 
@@ -25,7 +25,7 @@ gulp.task('sprite', function () {
   var spriteData = gulp.src('temp/sprite/*.png').pipe(spritesmith({
     imgName: 'sprite.png',
     cssName: '_sprite.scss',
-    imgPath: '/images/sprite.png',
+    imgPath: 'public/images/sprite.png',
     cssVarMap: function (sprite) {
       sprite.name = 'icon-' + sprite.name;
     }
@@ -34,7 +34,7 @@ gulp.task('sprite', function () {
   var imgStream = spriteData.img
     .pipe(buffer())
     .pipe(imagemin())
-    .pipe(gulp.dest('images/'));
+    .pipe(gulp.dest('public/images/'));
 
   var cssStream = spriteData.css
     .pipe(gulp.dest('sass/'));
@@ -45,10 +45,10 @@ gulp.task('sprite', function () {
 // watch task
 gulp.task('watch',function() {
     browserSync.init({
-      server: "./"
+      server: "./public/"
     });
     gulp.watch('sass/**/*.scss',['styles']);
-    gulp.watch('*.html').on('change', browserSync.reload);
+    gulp.watch('public/*.html').on('change', browserSync.reload);
 });
 
 // default task

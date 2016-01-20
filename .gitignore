@@ -5,4 +5,9 @@ node_modules
 xplosion
 
 # CSS
-css
+public/css
+
+# Components
+public/components
+
+
