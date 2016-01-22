@@ -1,0 +1,125 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$icon-arrow-grey-name: 'icon-arrow-grey';
+$icon-arrow-grey-x: 22px;
+$icon-arrow-grey-y: 22px;
+$icon-arrow-grey-offset-x: -22px;
+$icon-arrow-grey-offset-y: -22px;
+$icon-arrow-grey-width: 12px;
+$icon-arrow-grey-height: 9px;
+$icon-arrow-grey-total-width: 44px;
+$icon-arrow-grey-total-height: 44px;
+$icon-arrow-grey-image: '/images/sprite.png';
+$icon-arrow-grey: (22px, 22px, -22px, -22px, 12px, 9px, 44px, 44px, '/images/sprite.png', 'icon-arrow-grey', );
+$icon-arrow-name: 'icon-arrow';
+$icon-arrow-x: 22px;
+$icon-arrow-y: 31px;
+$icon-arrow-offset-x: -22px;
+$icon-arrow-offset-y: -31px;
+$icon-arrow-width: 12px;
+$icon-arrow-height: 9px;
+$icon-arrow-total-width: 44px;
+$icon-arrow-total-height: 44px;
+$icon-arrow-image: '/images/sprite.png';
+$icon-arrow: (22px, 31px, -22px, -31px, 12px, 9px, 44px, 44px, '/images/sprite.png', 'icon-arrow', );
+$icon-fb-name: 'icon-fb';
+$icon-fb-x: 0px;
+$icon-fb-y: 0px;
+$icon-fb-offset-x: 0px;
+$icon-fb-offset-y: 0px;
+$icon-fb-width: 22px;
+$icon-fb-height: 22px;
+$icon-fb-total-width: 44px;
+$icon-fb-total-height: 44px;
+$icon-fb-image: '/images/sprite.png';
+$icon-fb: (0px, 0px, 0px, 0px, 22px, 22px, 44px, 44px, '/images/sprite.png', 'icon-fb', );
+$icon-g-plus-name: 'icon-g-plus';
+$icon-g-plus-x: 22px;
+$icon-g-plus-y: 0px;
+$icon-g-plus-offset-x: -22px;
+$icon-g-plus-offset-y: 0px;
+$icon-g-plus-width: 22px;
+$icon-g-plus-height: 22px;
+$icon-g-plus-total-width: 44px;
+$icon-g-plus-total-height: 44px;
+$icon-g-plus-image: '/images/sprite.png';
+$icon-g-plus: (22px, 0px, -22px, 0px, 22px, 22px, 44px, 44px, '/images/sprite.png', 'icon-g-plus', );
+$icon-twitter-name: 'icon-twitter';
+$icon-twitter-x: 0px;
+$icon-twitter-y: 22px;
+$icon-twitter-offset-x: 0px;
+$icon-twitter-offset-y: -22px;
+$icon-twitter-width: 22px;
+$icon-twitter-height: 22px;
+$icon-twitter-total-width: 44px;
+$icon-twitter-total-height: 44px;
+$icon-twitter-image: '/images/sprite.png';
+$icon-twitter: (0px, 22px, 0px, -22px, 22px, 22px, 44px, 44px, '/images/sprite.png', 'icon-twitter', );
+$spritesheet-width: 44px;
+$spritesheet-height: 44px;
+$spritesheet-image: '/images/sprite.png';
+$spritesheet-sprites: ($icon-arrow-grey, $icon-arrow, $icon-fb, $icon-g-plus, $icon-twitter, );
+$spritesheet: (44px, 44px, '/images/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

@@ -1,0 +1,79 @@
+/* elements */
+
+#search-toggle {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  cursor: pointer;
+  padding: 10px 10px 24px 10px;
+  z-index: 11;
+  svg {
+    width: 35px;
+    fill: $color-razzmatazz;
+  }
+  &.active {
+    background-color: $color-radical-red;
+    svg {
+      fill: $color-white;
+    }
+  }
+}
+
+// nav toggle
+#nav-toggle {
+  position: absolute;
+  left: 0;
+  top: $gutter/2;
+  cursor: pointer;
+  padding: 20px 45px 40px 10px;
+  z-index: 11;
+  span {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: $color-razzmatazz;
+    position: absolute;
+    display: block;
+    content: '';
+    &:before, &:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 5px;
+      width: 35px;
+      background: $color-razzmatazz;
+      position: absolute;
+      display: block;
+      content: '';
+    }
+    &:before {
+      top: -10px;
+    }
+    &:after {
+      bottom: -10px;
+    }
+    transition: all 500ms ease-in-out;
+    &:before, &:after {
+      transition: all 500ms ease-in-out;
+    }
+  }
+  &.active {
+    background-color: $color-radical-red;
+    span {
+      background-color: transparent;
+      &:before, &:after {
+        background-color: $color-white;
+        top: 0;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+// sprite
+@include sprites($spritesheet-sprites);

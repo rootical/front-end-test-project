@@ -1,0 +1,25 @@
+{
+  "name": "front-end-test-project",
+  "description": "Bench project",
+  "main": "index.js",
+  "authors": [
+    "Michal Mrugala"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/desano/front-end-test-project",
+  "moduleType": [
+    "amd",
+    "globals",
+    "yui"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "owlcarousel": "~1.3.2"
+  }
+}

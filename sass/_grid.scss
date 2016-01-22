@@ -1,0 +1,57 @@
+/* grid */
+
+@mixin row($inside: false) {
+  @if($inside == true) {
+    margin-left: -$gutter/2;
+    margin-right: -$gutter/2;
+  }
+  @else {
+    width: 100%;
+    max-width: $wrapper;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include clearfix;
+}
+@mixin col($width: 1, $padding: true) {
+  float: left;
+  width: percentage($width);
+  @if($padding == true) {
+    padding-left: $gutter/2;
+    padding-right: $gutter/2;
+  }
+}
+
+/* Layout */
+.wrapper {
+  @include row();
+}
+.row {
+  @include row();
+}
+.column {
+  @include col(1, false);
+  @include mq($large-device) {
+    @include col(1/2, false);
+  }
+  &.padding {
+    @include col();
+    @include mq($large-device) {
+      @include col(1/2);
+    }
+  }
+}
+.content {
+  @include col;
+  @include mq($large-device) {
+    @include col(2/3, false);
+    padding-left: 0;
+  }
+}
+.sidebar {
+  @include col;
+  @include mq($large-device) {
+    @include col(1/3, false);
+    padding-right: 0;
+  }
+}

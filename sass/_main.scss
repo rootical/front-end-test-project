@@ -1,0 +1,467 @@
+/* main style */
+
+// simple reset
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// global
+body {
+  background: $color-background;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  color: $color-text;
+}
+
+a {
+  text-decoration: none;
+  color: $color-text;
+  &:hover {
+    color: $color-text-hover;
+  }
+}
+
+i {
+  display: inline-block;
+}
+
+input:focus, button:focus {
+  outline:0 !important;
+}
+
+.button {
+  display: inline-block;
+  padding: 11px;
+  background-color: $color-razzmatazz;
+  background-image: linear-gradient(to top, $color-razzmatazz 0%, $color-razzmatazz 50%, $color-radical-red 100%);
+  border: 0;
+  border-radius: 9px;
+  box-shadow: 1.4px 1.4px 0 rgba(0, 0, 0, 0.15);
+  text-shadow: -0.7px -0.7px 0 rgba(0, 0, 0, 0.2);
+  color: $color-white;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  cursor: pointer;
+  &.small {
+    font-size: 1.1em;
+    padding: 8px;
+  }
+}
+
+// header
+.main-header {
+  padding-bottom: $gutter/2;
+  min-width: 320px;
+  position: relative;
+  @include mq($medium-device) {
+    padding-bottom: $gutter*2;
+  }
+  .top {
+    padding: $gutter/2 $gutter;
+    text-align: center;
+    @include mq($medium-device) {
+      padding: $gutter*2 0 $gutter*2 $gutter;
+    }
+    h1 {
+      @include mq($medium-device) {
+        float: left;
+      }
+    }
+    .banner {
+      display: inline-block;
+      padding: $gutter/2 0;
+      @include mq($medium-device) {
+        padding: 0;
+      }
+    }
+    .search {
+      position: absolute;
+      top: 70px;
+      width: 100%;
+      z-index: 10;
+      left: 0;
+      background-color: #e61052;
+      background-image: linear-gradient(to top, #e61052 0%, #e61052 50%, #fb2e6d 100%);
+      white-space: nowrap;
+      max-height: 0;
+      overflow: hidden;
+      @include mq($medium-device) {
+        margin-top: 16px;
+        position: static;
+        width: auto;
+        background: transparent;
+        padding: 0;
+        float: right;
+        max-height: none;
+        overflow: visible;
+      }
+      &.active {
+        max-height: 500px;
+      }
+      .search-content {
+        padding: 25px 80px 25px 10px;
+        @include mq($medium-device) {
+          padding: 0;
+        }
+        input {
+          border: 0;
+          padding: 10px;
+          margin-right: 10px;
+          height: 29px;
+          background-color: $color-white;
+          border-radius: 9px;
+          box-shadow: inset 1.4px 1.4px 0 rgba(0, 0, 0, 0.23);
+          color: $color-text;
+          width: 100%;
+          @include mq($medium-device) {
+            width: auto;;
+          }
+        }
+      }
+    }
+    #search-toggle {
+      @include mq($medium-device) {
+        display: none;
+      }
+    }
+  }
+  nav {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    z-index: 10;
+  	max-height: 0;
+    overflow-y: hidden;
+    &.active {
+      max-height: 500px;
+    }
+    @include mq($medium-device) {
+      position: static;
+      max-height: none;
+      overflow-y: visible;
+    }
+    ul {
+      width: 100%;
+      list-style: none;
+      background-color: $color-razzmatazz;
+      background-image: linear-gradient(to top, $color-razzmatazz 0%, $color-razzmatazz 50%, $color-radical-red 100%);
+      @include mq($medium-device) {
+        display: table;
+        table-layout: fixed;
+        border-radius: 9px;
+        box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+      }
+      li {
+        text-align: center;
+        @include mq($medium-device) {
+          display: table-cell;
+          vertical-align: middle;
+          &:first-child {
+            a {
+              border-top-left-radius: 9px;
+              border-bottom-left-radius: 9px;
+              &:before {
+                display: none;
+              }
+            }
+          }
+          &:last-child {
+            a {
+              border-top-right-radius: 9px;
+              border-bottom-right-radius: 9px;
+            }
+          }
+        }
+        a {
+          display: block;
+          position: relative;
+          width: 100%;
+          padding: 23px 5px;
+          text-shadow: -0.7px -0.7px 0 rgba(0, 0, 0, 0.2);
+          color: $color-white;
+          font-size: 1.4em;
+          font-weight: 700;
+          text-transform: uppercase;
+          &:hover {
+            background-color: #2a1f0f;
+            background-image: linear-gradient(to top, #2a1f0f 0%, #2a1f0f 50%, #53432c 100%, #53432c 100%);
+            &:before {
+              opacity: 0.3;
+            }
+          }
+          @include mq($medium-device) {
+            font-size: 1.2em;
+            &:before {
+              @include dotted-line(left, $color-mauvelous);
+            }
+          }
+        }
+      }
+    }
+  }
+  #nav-toggle {
+    @include mq($medium-device) {
+      display: none;
+    }
+  }
+}
+
+// content
+.main-banner {
+  h2 {
+    font-family: Bebas, Arial, sans-serif;
+    font-size: 6.5em;
+    color: $color-razzmatazz;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    span {
+      display: block;
+      font-size: 0.6em;
+      color: $color-text-very-dark;
+    }
+    & + p {
+      color: $color-razzmatazz;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+  }
+  p {
+    color: $color-text-darker;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .banner-img {
+    min-height: 450px;
+    background: url(/images/main-banner.jpg) center -40px no-repeat;
+    position: relative;
+    z-index: -1;
+    padding: 0 20px;
+    margin: 0 -20px;
+    @include mq($large-device) {
+      padding: 0 300px;
+      margin: 0 -300px;
+    }
+  }
+}
+
+.column-blocks {
+  border-radius: 15px;
+  @include mq($large-device) {
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.05);
+    background: $color-white;
+  }
+}
+
+section {
+  background: $color-white;
+  margin-bottom: $gutter;
+  border-radius: 15px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.05);
+  @include mq($large-device) {
+    margin-bottom: 0;
+    box-shadow: none;
+  }
+  header {
+    padding: $gutter;
+    position: relative;
+    h2 {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.4em;
+    }
+    &:after {
+      @include dotted-line(bottom, $color-akaroa);
+    }
+    &.color {
+      background-color: $color-razzmatazz;
+      background-image: linear-gradient(to top, $color-razzmatazz 0%, $color-razzmatazz 50%, $color-radical-red 100%);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+      color: $color-white;
+      text-shadow: -0.7px -0.7px 0 rgba(0, 0, 0, 0.2);
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+      &:after {
+        display: none;
+      }
+    }
+  }
+  &.left {
+    position: relative;
+    @include mq($large-device) {
+      border-bottom-right-radius: 0;
+      &:after {
+        @include dotted-line(right, $color-akaroa);
+      }
+    }
+    header {
+      &.color {
+        @include mq($large-device) {
+          border-top-left-radius: inherit;
+          border-top-right-radius: 0;
+        }
+      }
+    }
+  }
+  &.right {
+    header {
+      &.color {
+        @include mq($large-device) {
+          border-top-left-radius: 0;
+          border-top-right-radius: inherit;
+        }
+      }
+    }
+    @include mq($large-device) {
+      border-bottom-left-radius: 0;
+    }
+  }
+  .blocks {
+    padding: $gutter/2 $gutter;
+    .block-content {
+      padding: $gutter/2 0;
+      font-size: 1.2em;
+      line-height: 1.5;
+      h3 {
+        color: $color-text-very-dark;
+        padding: $gutter/4 0;
+      }
+      figure {
+        display: inline-block;
+        border: 1px solid $color-brown-light;
+        padding: 2px;
+        @include mq($medium-device) {
+          float: left;
+        }
+        img {
+          display: block;
+        }
+      }
+      p {
+        min-height: 105px;
+        @include mq($medium-device) {
+          padding-left: 125px;
+        }
+        a.link {
+          display: block;
+          margin-top: 10px;
+          color: $color-razzmatazz;
+          i {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebar {
+  section {
+    margin-bottom: $gutter;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.05);
+    header {
+      h3 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.4em;
+        color: $color-razzmatazz;
+      }
+    }
+    .block-content {
+      padding: $gutter;
+      font-size: 1.2em;
+      line-height: 1.5;
+      ul.list {
+        list-style: none;
+        li {
+          padding: 3px 0;
+          &:before {
+            content: '';
+            display: inline-block;
+            margin-right: 10px;
+            @include sprite($icon-arrow-grey);
+          }
+        }
+      }
+      ul.social {
+        list-style: none;
+        li {
+          display: inline-block;
+          vertical-align: middle;
+          padding-bottom: 10px;
+          a {
+            margin-right: 15px;
+            i {
+              margin-right: 5px;
+              vertical-align: middle;
+              opacity: 0.9;
+              transition: all 0.3s ease-in-out;
+            }
+            span {
+              vertical-align: middle;
+            }
+            &:hover {
+              i {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// footer
+footer {
+  background: $color-background-darker;
+  width: 100%;
+  box-shadow: inset 0 4px 0 rgba(0, 0, 0, 0.05);
+  font-size: 1.2em;
+  color: $color-text-dark;
+  padding: $gutter*2 $gutter;
+  margin-top: $gutter*2;
+  .copy {
+    padding: 5px 0;
+    @include mq($medium-device) {
+      float: left;
+    }
+  }
+  .footer-menu {
+    margin-top: 10px;
+    @include mq($medium-device) {
+      margin-top: 0;
+      float: right;
+    }
+    ul {
+      list-style: none;
+      li {
+        display: block;
+        float: left;
+        position: relative;
+        padding: 5px 0;
+        &:after {
+          @include dotted-line(right, $color-text-dark);
+        }
+        &:first-child {
+          &:before {
+            @include dotted-line(left, $color-text-dark);
+          }
+        }
+        a {
+          color: $color-text-dark;
+          padding: 0 7px;
+          transition: color 0.3s ease-in-out;
+          @include mq($medium-device) {
+            padding: 0 30px;
+          }
+          &:hover {
+            color: $color-text-very-dark;
+          }
+        }
+      }
+    }
+  }
+}

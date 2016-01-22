@@ -1,0 +1,60 @@
+/* mixins */
+
+// Clearfix
+// --------------------------------------------------
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Breakpoint Mixins
+// --------------------------------------------------
+@mixin mq($value) {
+  @media only screen and (min-width: $value) {
+    @content;
+  }
+}
+
+// Dotted lines Mixins
+// --------------------------------------------------
+@mixin dotted-line($position, $color) {
+  position: absolute;
+  content: "";
+  display: block;
+  @if $position == left or $position == right {
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    background-image: linear-gradient(to bottom, $color 20%, rgba(255, 255, 255, 0) 0%);
+    background-position: left;
+    background-size: 1px 5px;
+    background-repeat: repeat-y;
+  } @else if $position == top or $position == bottom {
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(to right, $color 20%, rgba(255, 255, 255, 0) 0%);
+    background-position: top;
+    background-size: 5px 1px;
+    background-repeat: repeat-x;
+  }
+  @if $position == left {
+    left: 0;
+  } @else if $position == right {
+    right: 0;
+  } @else if $position == top {
+    top: 0;
+  } @else if $position == bottom {
+    bottom: 0;
+  }
+}
